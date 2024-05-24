@@ -51,7 +51,7 @@ const handleNewFile = async (filePath) => {
     const fileName = path.basename(filePath);
 
     // Save to Firestore
-    await db.collection('files').doc(fileName).set({
+    await db.collection('files').doc('image').set({
       name: fileName,
       content: base64String,
       timestamp: admin.firestore.FieldValue.serverTimestamp()
